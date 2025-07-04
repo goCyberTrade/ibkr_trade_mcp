@@ -133,14 +133,3 @@ Configure in your application code with:
 6. Use the chat interface for tool interactions.
 7. Optionally enable "Auto-approve" to skip confirmation for future tool calls.
 
-
-## License
-This project is licensed under [specify your license here].
-
-For detailed API documentation, please refer to the [Wiki](https://github.com/yourusername/your-repo/wiki).
-[图片]
-在聊天框进行对话使用。
-[图片]
-审批工具调用，也可以选择Auto-approve，在之后所有调用这个工具的时候都无需审批了
-[图片]
-[图片]
