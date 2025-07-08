@@ -3,7 +3,7 @@
 # IBKR Trading MCP Tools
 
 # Table of contents
-[Overview](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#overview)
+- [Overview](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#overview)
 
 [1.Environment Setup](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#1-environment-setup)
 
