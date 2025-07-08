@@ -19,9 +19,6 @@
   
   [2.2 Start MCP Server](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#22-start-mcp-server)
   
-    [Option 1: SSE Mode (Recommended)](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#option-1-sse-mode-recommended)
-    
-    [Option 2: STDIO Mode](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#option-2-stdio-mode)
     
 [3. Using MCP Tools in Development Environments](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#3-using-mcp-tools-in-development-environments)
 
