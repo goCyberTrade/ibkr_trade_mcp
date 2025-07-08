@@ -1,7 +1,9 @@
 # ibkr_trade_mcp
 # IBKR Trading MCP Tools
 
-This project implements MCP (Market Connectivity Platform) tools for interacting with IBKR (Interactive Brokers) trading systems, including account querying, order placement, position management, and other essential trading functionalities.
+
+# Overview
+This project implements MCP (Market Connectivity Platform) tools for interacting with IBKR (Interactive Brokers) trading systems, including account querying, order placement, position management, and other essential trading functionalities. This project is built on top of Interactive Brokers [WEB API.](https://www.interactivebrokers.com/campus/ibkr-api-page/webapi-doc/#introduction-0)
 
 
 ## 1. Environment Setup
