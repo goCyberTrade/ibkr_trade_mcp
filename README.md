@@ -4,6 +4,19 @@
 
 # Table of contents
 [Overview](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#overview)
+[1.Environment Setup](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#1-environment-setup)
+  [1.1 Install Python Environment](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#11-install-python-environment)
+  [1.2 Install UV Tool](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#12-install-uv-tool)
+  [1.3 Install JDK](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#13-install-jdk)
+[2. Broker MCP Tool Installation & Startup](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#2-broker-mcp-tool-installation--startup)
+  [2.1 IBKR MCP Server Installation](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#21-ibkr-mcp-server-installation)
+  [2.2 Start MCP Server](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#22-start-mcp-server)
+    [Option 1: SSE Mode (Recommended)](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#option-1-sse-mode-recommended)
+    [Option 2: STDIO Mode](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#option-2-stdio-mode)
+[3. Using MCP Tools in Development Environments](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#3-using-mcp-tools-in-development-environments)
+  [3.1 Cursor IDE Integration](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#31-cursor-ide-integration)
+  [3.2 VS Code Integration](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#32-vs-code-integration)
+
 
 
 # Overview
