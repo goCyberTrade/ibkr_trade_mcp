@@ -1,6 +1,6 @@
 ![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/ebtech.png)
 
-   ![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/cursor.gif)
+![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/cursor.gif)
 
 # ibkr_trade_mcp
 # IBKR Trading MCP Tools
