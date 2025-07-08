@@ -120,8 +120,10 @@ Configure in your application code with:
 ### 3.2 VS Code Integration
 1. Download VS Code from: [VS Code Official](https://code.visualstudio.com/)
 2. Install the "Cline" extension from the Marketplace.
+   
    ![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/vs_cline.png)
 4. Configure your AI model API key (e.g., DeepSeek).
+   
    ![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/vs_model.png)
 6. Configure MCP service with:
    ```json
@@ -138,8 +140,10 @@ Configure in your application code with:
    }
    ```
 7. Enable the configuration and ensure status is green.
+   
    ![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/vs_tools.png)
 9. Use the chat interface for tool interactions.
+    
    ![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/vs_test.gif)
 11. Optionally enable "Auto-approve" to skip confirmation for future tool calls.
 
