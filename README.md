@@ -112,7 +112,8 @@ Configure in your application code with:
    }
    ```
 3. Enable the configuration and ensure status is green.
-4. Open the chat interface (`Ctrl+L` by default) to use the tools.
+   ![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/cursor_tools.png)
+5. Open the chat interface (`Ctrl+L` by default) to use the tools.
 
 ### 3.2 VS Code Integration
 1. Download VS Code from: [VS Code Official](https://code.visualstudio.com/)
