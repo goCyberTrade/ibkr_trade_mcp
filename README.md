@@ -6,11 +6,9 @@
 
 </div>
 
-
-# ibkr_trade_mcp
 # IBKR Trading MCP Tools
 
-# Table of contents
+## Table of contents
 - [Overview](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#overview)
 
 - [1.Environment Setup](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#1-environment-setup)
@@ -38,7 +36,7 @@
 
 
 
-# Overview
+## Overview
 This project implements MCP (Market Connectivity Platform) tools for interacting with IBKR (Interactive Brokers) trading systems, including account querying, order placement, position management, and other essential trading functionalities. This project is built on top of Interactive Brokers [WEB API.](https://www.interactivebrokers.com/campus/ibkr-api-page/webapi-doc/#introduction-0)
 
 
