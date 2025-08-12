@@ -9,9 +9,7 @@ from ebang_securities_mcp_server.tools import position_tools, channel_tools, tra
 from ebang_securities_mcp_server.tools import account_tools
 from ebang_securities_mcp_server.channel import ibkr_gateway_manager
 
-
-logger.remove()
-logger.add(sink=sys.stdout, level="DEBUG")
+# Logger is already configured in __init__.py, no need to reconfigure
 
 
 
@@ -29,9 +27,8 @@ logger.add(sink=sys.stdout, level="DEBUG")
     help="Port number",
 )
 def main(transport: str, port: int):
-
-    if transport == 'sse':
-        logger.add(Path('log.log'))
+    # File logging is already configured in __init__.py for all transport types
+    # No need for conditional file logging setup
 
     #ib gateway
     ibkr_gateway_manager.check_and_run_gateway()

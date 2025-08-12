@@ -27,12 +27,14 @@ def send_ib_request(method: str, url: str, payload: dict | None = None, header: 
 
     try:
         # 根据HTTP方法调用对应的requests方法
+        # 设置30秒超时以防止请求挂起
+        timeout = 30
         if method.upper() == 'GET':
-            response = requests.get(url, params=payload, headers=header, verify=False)
+            response = requests.get(url, params=payload, headers=header, verify=False, timeout=timeout)
         elif method.upper() == 'POST':
-            response = requests.post(url, json=payload, headers=header, verify=False)
+            response = requests.post(url, json=payload, headers=header, verify=False, timeout=timeout)
         elif method.upper() == 'DELETE':
-            response = requests.delete(url, json=payload, headers=header, verify=False)
+            response = requests.delete(url, json=payload, headers=header, verify=False, timeout=timeout)
         else:
             raise ValueError(f"不支持的HTTP方法: {method}")
 

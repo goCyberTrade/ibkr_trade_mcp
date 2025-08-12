@@ -71,8 +71,8 @@ class IBKrService(BaseService):
     def get_history_transactions(self, account_id_list: list[str], con_id_list: list[str], currency: str = "USD", days: int = 90):
         url = f"{BASE_URL}/pa/transactions"
         json_data = {
-            'acctIds': [account_id_list],
-            'conids': [con_id_list],
+            'acctIds': account_id_list,
+            'conids': con_id_list,
             'currency': currency,
             'days': days,
         }
