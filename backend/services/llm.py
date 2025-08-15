@@ -81,9 +81,9 @@ def get_openrouter_fallback(model_name: str) -> Optional[str]:
         "gemini/gemini-2.5-pro": "openrouter/google/gemini-2.5-pro",
         "deepseek/deepseek-chat": "openrouter/deepseek/deepseek-chat",
         "deepseek/deepseek-coder": "openrouter/deepseek/deepseek-coder",
-        "qwen/qwen-plus": "openrouter/qwen/qwen-plus",
-        "qwen/qwen-turbo": "openrouter/qwen/qwen-turbo",
-        "qwen/qwen-max": "openrouter/qwen/qwen-max",
+        "qwen/qwen-plus": "openrouter/qwen/qwen-2.5-72b-instruct",
+        "qwen/qwen-turbo": "openrouter/qwen/qwen-2-7b-instruct",
+        "qwen/qwen-max": "openrouter/qwen/qwen-2.5-72b-instruct",
     }
     
     # Check for exact match first
@@ -103,7 +103,7 @@ def get_openrouter_fallback(model_name: str) -> Optional[str]:
     elif "deepseek" in model_name.lower():
         return "openrouter/deepseek/deepseek-chat"
     elif "qwen" in model_name.lower():
-        return "openrouter/qwen/qwen-plus"
+        return "openrouter/qwen/qwen-2.5-72b-instruct"
     
     return None
 
@@ -286,10 +286,10 @@ def prepare_params(
     # Add DeepSeek-specific parameters
     if model_name.startswith("deepseek/") or "deepseek" in model_name.lower():
         logger.debug(f"Preparing DeepSeek parameters for model: {model_name}")
-        # Set API base for DeepSeek if not already set
+        # For LiteLLM, we need to use the correct provider format
+        # DeepSeek models should be called directly with their API
         if not api_base:
             params["api_base"] = "https://api.deepseek.com/v1"
-        # Set API key if available
         if not api_key and config.DEEPSEEK_API_KEY:
             params["api_key"] = config.DEEPSEEK_API_KEY
         # DeepSeek specific parameters
@@ -299,23 +299,39 @@ def prepare_params(
         extra_headers = params.get("extra_headers", {})
         extra_headers["User-Agent"] = "Kortix-AI/1.0"
         params["extra_headers"] = extra_headers
+        
+        # Convert model name to LiteLLM format for DeepSeek
+        if model_name == "deepseek/deepseek-chat":
+            params["model"] = "deepseek-chat"
+        elif model_name == "deepseek/deepseek-coder":
+            params["model"] = "deepseek-coder"
+        elif model_name.startswith("deepseek/"):
+            # Remove the deepseek/ prefix for direct API calls
+            params["model"] = model_name.replace("deepseek/", "")
     
-    # Add Qwen-specific parameters  
+    # Add Qwen-specific parameters (using Dashscope provider format)
     if model_name.startswith("qwen/") or "qwen" in model_name.lower():
         logger.debug(f"Preparing Qwen parameters for model: {model_name}")
-        # Set API base for Qwen if not already set
-        if not api_base:
-            params["api_base"] = "https://dashscope.aliyuncs.com/api/v1"
-        # Set API key if available
+        # For Qwen models, we use the dashscope provider in LiteLLM
         if not api_key and config.QWEN_API_KEY:
             params["api_key"] = config.QWEN_API_KEY
         # Qwen specific parameters
         if "top_p" not in params or params["top_p"] is None:
             params["top_p"] = 0.8
-        # Add custom headers for Qwen
-        extra_headers = params.get("extra_headers", {})
-        extra_headers["Authorization"] = f"Bearer {params.get('api_key', config.QWEN_API_KEY)}"
-        params["extra_headers"] = extra_headers
+            
+        # Convert model name to LiteLLM dashscope format
+        if model_name == "qwen/qwen-plus":
+            params["model"] = "dashscope/qwen-plus"
+        elif model_name == "qwen/qwen-turbo":
+            params["model"] = "dashscope/qwen-turbo"
+        elif model_name == "qwen/qwen-max":
+            params["model"] = "dashscope/qwen-max"
+        elif model_name.startswith("qwen/"):
+            # Convert qwen/ prefix to dashscope/ prefix
+            params["model"] = model_name.replace("qwen/", "dashscope/")
+        elif "qwen" in model_name.lower():
+            # For models that just contain "qwen" in the name
+            params["model"] = f"dashscope/{model_name}"
 
     return params
 

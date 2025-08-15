@@ -93,16 +93,29 @@ export MODEL_TO_USE="qwen/qwen-plus"
 ## 模型特性和参数
 
 ### DeepSeek 模型特性
+- **LiteLLM 格式**: 直接 API 调用（自动处理）
 - **API 地址**: `https://api.deepseek.com/v1`
 - **默认 top_p**: 0.95
 - **支持的参数**: temperature, max_tokens, top_p, frequency_penalty, presence_penalty
 - **特点**: 支持中英文对话，代码生成能力强
 
 ### Qwen 模型特性
-- **API 地址**: `https://dashscope.aliyuncs.com/api/v1`
+- **LiteLLM 格式**: `dashscope/` 前缀（自动转换）
+- **提供商**: 阿里云灵积 (DashScope)
 - **默认 top_p**: 0.8
 - **支持的参数**: temperature, max_tokens, top_p, repetition_penalty
 - **特点**: 中文理解能力强，多模态支持
+
+## 技术实现细节
+
+### 模型名称转换
+代码会自动处理模型名称转换：
+
+- `deepseek/deepseek-chat` → `deepseek-chat` (直接 API 调用)
+- `deepseek/deepseek-coder` → `deepseek-coder` (直接 API 调用)
+- `qwen/qwen-plus` → `dashscope/qwen-plus` (LiteLLM dashscope 提供商)
+- `qwen/qwen-turbo` → `dashscope/qwen-turbo` (LiteLLM dashscope 提供商)
+- `qwen/qwen-max` → `dashscope/qwen-max` (LiteLLM dashscope 提供商)
 
 ## Fallback 支持
 
@@ -110,9 +123,9 @@ export MODEL_TO_USE="qwen/qwen-plus"
 
 - `deepseek/deepseek-chat` → `openrouter/deepseek/deepseek-chat`
 - `deepseek/deepseek-coder` → `openrouter/deepseek/deepseek-coder`
-- `qwen/qwen-plus` → `openrouter/qwen/qwen-plus`
-- `qwen/qwen-turbo` → `openrouter/qwen/qwen-turbo`
-- `qwen/qwen-max` → `openrouter/qwen/qwen-max`
+- `qwen/qwen-plus` → `openrouter/qwen/qwen-2.5-72b-instruct`
+- `qwen/qwen-turbo` → `openrouter/qwen/qwen-2-7b-instruct`
+- `qwen/qwen-max` → `openrouter/qwen/qwen-2.5-72b-instruct`
 
 ## 测试集成
 
