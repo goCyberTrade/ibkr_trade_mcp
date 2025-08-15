@@ -1,184 +1,211 @@
 <div align="center">
 
-![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/ebtech.png)
+# Kortix – Open Source Platform to Build, Manage and Train AI Agents
 
-MCP Account Asset Query Example：
+![Kortix Screenshot](frontend/public/banner.png)
 
-![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/cursor.gif)
+**The complete platform for creating autonomous AI agents that work for you**
+
+Kortix is a comprehensive open source platform that empowers you to build, manage, and train sophisticated AI agents for any use case. Create powerful agents that act autonomously on your behalf, from general-purpose assistants to specialized automation tools.
+
+[![License](https://img.shields.io/badge/License-Apache--2.0-blue)](./license)
+[![Discord Follow](https://dcbadge.limes.pink/api/server/Py6pCBUUPw?style=flat)](https://discord.gg/Py6pCBUUPw)
+[![Twitter Follow](https://img.shields.io/twitter/follow/kortixai)](https://x.com/kortixai)
+[![GitHub Repo stars](https://img.shields.io/github/stars/kortix-ai/suna)](https://github.com/kortix-ai/suna)
+[![Issues](https://img.shields.io/github/issues/kortix-ai/suna)](https://github.com/kortix-ai/suna/labels/bug)
+
+<!-- Keep these links. Translations will automatically update with the README. -->
+[Deutsch](https://www.readme-i18n.com/kortix-ai/suna?lang=de) | 
+[Español](https://www.readme-i18n.com/kortix-ai/suna?lang=es) | 
+[français](https://www.readme-i18n.com/kortix-ai/suna?lang=fr) | 
+[日本語](https://www.readme-i18n.com/kortix-ai/suna?lang=ja) | 
+[한국어](https://www.readme-i18n.com/kortix-ai/suna?lang=ko) | 
+[Português](https://www.readme-i18n.com/kortix-ai/suna?lang=pt) | 
+[Русский](https://www.readme-i18n.com/kortix-ai/suna?lang=ru) | 
+[中文](https://www.readme-i18n.com/kortix-ai/suna?lang=zh)
 
 </div>
 
-# IBKR Trading MCP Tools
+## 🌟 What Makes Kortix Special
 
-## Table of contents
-- [Overview](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#overview)
+### 🤖 Includes Suna – Flagship Generalist AI Worker
+Meet Suna, our showcase agent that demonstrates the full power of the Kortix platform. Through natural conversation, Suna handles research, data analysis, browser automation, file management, and complex workflows – showing you what's possible when you build with Kortix.
 
-- [1.Environment Setup](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#1-environment-setup)
+### 🔧 Build Custom Suna-Type Agents
+Create your own specialized agents tailored to specific domains, workflows, or business needs. Whether you need agents for customer service, data processing, content creation, or industry-specific tasks, Kortix provides the infrastructure and tools to build, deploy, and scale them.
 
-  - [1.1 Install Python Environment](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#11-install-python-environment)
-  
-  - [1.2 Install UV Tool](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#12-install-uv-tool)
-  
-  - [1.3 Install JDK](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#13-install-jdk)
-  
-- [2. Broker MCP Tool Installation & Startup](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#2-broker-mcp-tool-installation--startup)
+### 🚀 Complete Platform Capabilities
+- **Browser Automation**: Navigate websites, extract data, fill forms, automate web workflows
+- **File Management**: Create, edit, and organize documents, spreadsheets, presentations, code
+- **Web Intelligence**: Crawling, search capabilities, data extraction and synthesis
+- **System Operations**: Command-line execution, system administration, DevOps tasks
+- **API Integrations**: Connect with external services and automate cross-platform workflows
+- **Agent Builder**: Visual tools to configure, customize, and deploy agents
 
-  - [2.1 IBKR MCP Server Installation](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#21-ibkr-mcp-server-installation)
-  
-  - [2.2 Start MCP Server](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#22-start-mcp-server)
-    - [Option 1: SSE Mode (Recommended)](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#option-1-sse-mode-recommended)
-    - [Option 2: STDIO Mode](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#option-2-stdio-mode)
-  
-    
-- [3. Using MCP Tools in Development Environments](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#3-using-mcp-tools-in-development-environments)
+## 📋 Table of Contents
 
-  - [3.1 Cursor IDE Integration](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#31-cursor-ide-integration)
-  
-  - [3.2 VS Code Integration](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/README.md#32-vs-code-integration)
+- [🌟 What Makes Kortix Special](#-what-makes-kortix-special)
+- [🎯 Agent Examples & Use Cases](#-agent-examples--use-cases)
+- [🏗️ Platform Architecture](#️-platform-architecture)
+- [🚀 Quick Start](#-quick-start)
+- [🏠 Self-Hosting](#-self-hosting)
+- [🤝 Contributing](#-contributing)
+- [📄 License](#-license)
 
+## 🎯 Agent Examples & Use Cases
 
+### Suna - Your Generalist AI Worker
 
-## Overview
-This project implements MCP (Market Connectivity Platform) tools for interacting with IBKR (Interactive Brokers) trading systems, including account querying, order placement, position management, and other essential trading functionalities. This project is built on top of Interactive Brokers [WEB API.](https://www.interactivebrokers.com/campus/ibkr-api-page/webapi-doc/#introduction-0)
+Suna demonstrates the full capabilities of the Kortix platform as a versatile AI worker that can:
 
+**🔍 Research & Analysis**
+- Conduct comprehensive web research across multiple sources
+- Analyze documents, reports, and datasets
+- Synthesize information and create detailed summaries
+- Market research and competitive intelligence
 
-## 1. Environment Setup
+**🌐 Browser Automation**
+- Navigate complex websites and web applications
+- Extract data from multiple pages automatically
+- Fill forms and submit information
+- Automate repetitive web-based workflows
 
-### 1.1 Install Python Environment
-- Download Python installer from: [Python Official Downloads](https://www.python.org/downloads/)
-- Recommended version: **Python 3.10.X**
-- Verify installation with:
-  ```bash
-  python --version
-  pip --version
-  ```
+**📁 File & Document Management**
+- Create and edit documents, spreadsheets, presentations
+- Organize and structure file systems
+- Convert between different file formats
+- Generate reports and documentation
 
-### 1.2 Install UV Tool
+**📊 Data Processing & Analysis**
+- Clean and transform datasets from various sources
+- Perform statistical analysis and create visualizations
+- Monitor KPIs and generate insights
+- Integrate data from multiple APIs and databases
+
+**⚙️ System Administration**
+- Execute command-line operations safely
+- Manage system configurations and deployments
+- Automate DevOps workflows
+- Monitor system health and performance
+
+### Build Your Own Specialized Agents
+
+The Kortix platform enables you to create agents tailored to specific needs:
+
+**🎧 Customer Service Agents**
+- Handle support tickets and FAQ responses
+- Manage user onboarding and training
+- Escalate complex issues to human agents
+- Track customer satisfaction and feedback
+
+**✍️ Content Creation Agents**
+- Generate marketing copy and social media posts
+- Create technical documentation and tutorials
+- Develop educational content and training materials
+- Maintain content calendars and publishing schedules
+
+**📈 Sales & Marketing Agents**
+- Qualify leads and manage CRM systems
+- Schedule meetings and follow up with prospects
+- Create personalized outreach campaigns
+- Generate sales reports and forecasts
+
+**🔬 Research & Development Agents**
+- Conduct academic and scientific research
+- Monitor industry trends and innovations
+- Analyze patents and competitive landscapes
+- Generate research reports and recommendations
+
+**🏭 Industry-Specific Agents**
+- Healthcare: Patient data analysis, appointment scheduling
+- Finance: Risk assessment, compliance monitoring
+- Legal: Document review, case research
+- Education: Curriculum development, student assessment
+
+Each agent can be configured with custom tools, workflows, knowledge bases, and integrations specific to your requirements.
+
+## 🏗️ Platform Architecture
+
+![Architecture Diagram](docs/images/diagram.png)
+
+Kortix consists of four main components that work together to provide a complete AI agent development platform:
+
+### 🔧 Backend API
+Python/FastAPI service that powers the agent platform with REST endpoints, thread management, agent orchestration, and LLM integration with Anthropic, OpenAI, and others via LiteLLM. Includes agent builder tools, workflow management, and extensible tool system.
+
+### 🖥️ Frontend Dashboard
+Next.js/React application providing a comprehensive agent management interface with chat interfaces, agent configuration dashboards, workflow builders, monitoring tools, and deployment controls.
+
+### 🐳 Agent Runtime
+Isolated Docker execution environments for each agent instance featuring browser automation, code interpreter, file system access, tool integration, security sandboxing, and scalable agent deployment.
+
+### 🗄️ Database & Storage
+Supabase-powered data layer handling authentication, user management, agent configurations, conversation history, file storage, workflow state, analytics, and real-time subscriptions for live agent monitoring.
+
+## 🚀 Quick Start
+
+Get your Kortix platform running in minutes with our automated setup wizard:
+
+### 1️⃣ Clone the Repository
 ```bash
-pip install uv
+git clone https://github.com/kortix-ai/suna.git
+cd suna
 ```
-Verify installation:
+
+### 2️⃣ Run the Setup Wizard
 ```bash
-uv --version
+python setup.py
 ```
+The wizard will guide you through 14 steps with progress saving, so you can resume if interrupted.
 
-### 1.3 Install JDK
-- Download the latest JDK from: [Oracle JDK Downloads](https://www.oracle.com/java/technologies/downloads/#java11)
-- Verify installation:
-  ```bash
-  java -version
-  ```
-
-
-## 2. Broker MCP Tool Installation & Startup
-
-### 2.1 IBKR MCP Server Installation
-1. Build the project in the repository root:
-   ```bash
-   python -m build
-   ```
-2. Install the generated wheel package:
-   ```bash
-   pip install dist/ebang_securities_mcp_server-x.x.x-py3-none-any.whl
-   ```
-3. Verify installation:
-   ```bash
-   pip show ebang-securities-mcp-server
-   ```
-
-### 2.2 Start MCP Server
-#### Option 1: SSE Mode (Recommended)
-**Windows**:
+### 3️⃣ Start the Platform
 ```bash
-set IB_AUTO_RUN=True&&uv run ebang-securities-mcp-server
+python start.py
 ```
 
-**Linux/Mac**:
-```bash
-export IB_AUTO_RUN=True&&uv run ebang-securities-mcp-server
-```
+That's it! Your Kortix platform will be running with Suna ready to assist you.
 
-**Notes**:
-- The first startup will download the IB Gateway automatically (requires stable internet connection).
-- Register an IBKR demo account at: [IBKR Demo Account](https://www.interactivebrokers.com.sg/Universal/Application?ft=T)
-- Authenticate your IBKR account via: [http://localhost:5000](http://localhost:5000)
+## 🏠 Self-Hosting
 
-#### Option 2: STDIO Mode
-Configure in your application code with:
-```json
-{
-  "mcpServers": {
-    "stdio_trade": {
-      "disabled": true,
-      "timeout": 60,
-      "type": "stdio",
-      "command": "uv",
-      "args": [
-        "run",
-        "ebang-securities-mcp-server",
-        "--transport",
-        "stdio"
-      ],
-      "env": {
-        "IB_AUTO_RUN": "True"
-      }
-    }
-  }
-}
-```
+Kortix can be self-hosted on your own infrastructure using our comprehensive setup wizard, giving you complete control over your AI agent platform. For a complete guide to self-hosting Kortix, please refer to our [Self-Hosting Guide](./docs/SELF-HOSTING.md).
 
+### 🔧 Setup Process Includes
 
-## 3. Using MCP Tools in Development Environments
+- **🏗️ Infrastructure**: Supabase project setup for database and authentication
+- **⚡ Performance**: Redis configuration for caching and session management
+- **🛡️ Security**: Daytona setup for secure agent execution environments
+- **🤖 AI Integration**: LLM providers (Anthropic, OpenAI, OpenRouter, etc.)
+- **🌐 Web Capabilities**: Search and scraping (Tavily, Firecrawl)
+- **📋 Workflows**: QStash for background job processing
+- **🔗 Automation**: Webhook handling for automated tasks
+- **📊 Data Sources**: Optional RapidAPI integrations
 
-### 3.1 Cursor IDE Integration
-1. Download Cursor from: [Cursor Official](https://www.cursor.com/cn)
-2. Create an MCP Server configuration:
-   ```json
-   {
-     "mcpServers": {
-       "tradeMCP": {
-         "autoApprove": [],
-         "disabled": false,
-         "timeout": 60,
-         "type": "sse",
-         "url": "http://127.0.0.1:8000/sse"
-       }
-     }
-   }
-   ```
-3. Enable the configuration and ensure status is green.
-   ![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/cursor_tools.png)
-4. Open the chat interface (`Ctrl+L` by default) to use the tools.
+### 📚 Manual Setup
 
-   ![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/cursor.gif)
+For advanced users who prefer manual configuration, see the [Self-Hosting Guide](./docs/SELF-HOSTING.md) for detailed manual setup instructions.
 
-### 3.2 VS Code Integration
-1. Download VS Code from: [VS Code Official](https://code.visualstudio.com/)
-2. Install the "Cline" extension from the Marketplace.
-   
-   ![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/vs_cline.png)
-4. Configure your AI model API key (e.g., DeepSeek).
-   
-   ![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/vs_model.png)
-6. Configure MCP service with:
-   ```json
-   {
-     "mcpServers": {
-       "tradeMCP": {
-         "autoApprove": [],
-         "disabled": false,
-         "timeout": 60,
-         "type": "sse",
-         "url": "http://127.0.0.1:8000/sse"
-       }
-     }
-   }
-   ```
-7. Enable the configuration and ensure status is green.
-   
-   ![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/vs_tools.png)
-9. Use the chat interface for tool interactions.
-    
-   ![image](https://github.com/goCyberTrade/ibkr_trade_mcp/blob/main/pics/vs_test.gif)
-11. Optionally enable "Auto-approve" to skip confirmation for future tool calls.
+The wizard will guide you through all necessary steps to get your Kortix platform up and running. For detailed instructions, troubleshooting tips, and advanced configuration options, see the [Self-Hosting Guide](./docs/SELF-HOSTING.md).
 
+## 🤝 Contributing
+
+We welcome contributions from the community! Whether you're fixing bugs, adding features, or improving documentation, your help makes Kortix better for everyone.
+
+Please see our [Contributing Guide](./CONTRIBUTING.md) for more details on:
+- How to set up your development environment
+- Code style and standards
+- Pull request process
+- Community guidelines
+
+## 📄 License
+
+Kortix is licensed under the Apache License, Version 2.0. See [LICENSE](./LICENSE) for the full license text.
+
+---
+
+<div align="center">
+
+**Ready to build your first AI agent?** 
+
+[Get Started](./docs/SELF-HOSTING.md) • [Join Discord](https://discord.gg/Py6pCBUUPw) • [Follow on Twitter](https://x.com/kortixai)
+
+</div>

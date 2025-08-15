@@ -10,6 +10,8 @@ dependencies = [
     "mcp[cli]>=1.6.0",
     "requests>=2.32.3",
     "schedule>=1.2.2",
+    "openai>=1.0.0",
+    "httpx>=0.25.0",
 ]
 
 [build-system]
